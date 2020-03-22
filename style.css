@@ -1,0 +1,113 @@
+@font-face{
+    src: url(./fonts/Motorblock.ttf);
+    font-family: motor;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
+section .layer1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 450px;
+    background-position: center;
+    z-index: 1;
+    text-align: center;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #272626, #2e2d2d );
+    box-shadow: 6px 6px 9px #111111, -6px -6px 9px #454343;     
+}
+h3{
+    font-style: italic;
+    font-family: motor;
+    color: #b40e74;
+    font-size: 30px;
+    text-shadow: 0 0 0 #000, 3px 3px 5px #111111;
+    padding: 10px;
+    margin-top: 10%;
+}
+#ninja-img{
+    max-width: 300px;
+    padding: 5%;
+    margin-left: 5%;
+ }
+#enter-button{
+    font-family: motor;
+    color: #b40e74;
+    letter-spacing: 2.5px;
+    background-color: #2b2a2a;
+    border: unset;
+    box-shadow: 8px 8px 11px #111111, -8px -8px 11px #454343;  
+    margin-top: 40%;
+    margin-left: -50%;
+    border-radius: 10px;
+    position: absolute;
+    height: 6%;
+    width: 35%;
+    cursor: pointer;
+}
+#enter-button:hover{
+    color: #b40e74d3;
+    box-shadow:inset 5px 5px 6.5px #111111,inset  -5px -5px 6.5px #454343; 
+    letter-spacing: 2px;
+}
+section .layer2{
+    width: 100%;
+    height: 100%;
+    background: url(./img/motoredited.jpg);
+    background-position: center; 
+}
+.layer1:hover{
+    letter-spacing: 0.5px;
+    text-shadow: -2px -2px 6px #dfebf7d2, 2px 2px 4px #020a11;
+    transition: 2s;
+    box-shadow: 0 0 10px #b40e74, 0 0 40px #b40e74, 0 0 80px #b40e74;
+}
+.layer1:hover ~ .layer2{
+    filter: blur(10px);
+    transition: 2s;
+}
+@media only screen and (max-width: 768px){
+    section .layer1{
+        width: 450px;
+        height: 300px;
+        letter-spacing: 1px;
+        border-radius: 8px;
+        box-shadow: -3px -3px 7px #dfebf7d2,  3px 3px 5px #020a11;   
+    }
+    h3{
+        font-size: 25px;
+        padding: 5px;
+        margin-top: 5%;
+    }
+    #ninja-img{
+        max-width: 200px;
+    }
+    #enter-button{
+        letter-spacing: 0.8px;
+        margin-top: 30%;
+        border-radius: 8px;
+        height: 4.5%;
+        width: 29.5%;
+        font-size: 11px;
+        margin-left: -45%;
+    }
+    #enter-button:hover{
+        letter-spacing: 0.3px;
+    }
+    .layer1:hover{
+        letter-spacing: 0.3px;
+        box-shadow: 0 0 8px #b40e74, 0 0 35px #b40e74, 0 0 75px #b40e74;
+    }
+    .layer1:hover ~ .layer2{
+        filter: blur(8px);
+    }
+}
